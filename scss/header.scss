@@ -1,0 +1,47 @@
+
+
+header {
+  background-color: $peach;
+  height: 8vh;
+
+.main {
+
+  ul {
+    list-style-type: none; 
+    background-color: $peach;
+    li {
+      float: left;
+    
+    a {
+      display: block;
+      text-align: center;
+      padding: 1em 1em;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+    }
+  }
+  }
+}
+
+.lang {
+    
+  ul {
+    list-style-type: none; 
+    li {
+      float: right;
+    
+    a {
+      display: block;
+      text-align: center;
+      padding: 1em 1em;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+    }
+  }
+}
+}
+}
+
+

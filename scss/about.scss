@@ -1,0 +1,53 @@
+.title {
+  color: $blue;
+  font-size: $large;
+  text-transform: uppercase;
+}
+
+#about {
+
+
+  hr {
+    color: $blue;
+    width: 10vw;
+    height: 4px;
+  }
+
+  .experience {
+    color: $blue;
+    font-size: $medium;
+  }
+
+ .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 0.5fr;
+    grid-template-areas: 
+    "photo"
+    "text"
+    "icon";
+    border: 3px solid  $blue;
+    height: auto;
+    width: 80%;
+    margin: 0 atuo;
+
+    .photo {
+      grid-area: photo;
+        height: 50vh;
+      
+      img {
+        height: 100%;
+        width: 100%;
+      } 
+    }
+      
+    .text {
+      grid-area: text;
+    }
+
+    .icon {
+      grid-area: icon;
+    }
+  }
+
+}

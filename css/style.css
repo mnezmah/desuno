@@ -1,2 +1,80 @@
-div {
-  color: red; }
+header {
+  background-color: #AF979A;
+  height: 8vh; }
+  header .main ul {
+    list-style-type: none;
+    background-color: #AF979A; }
+    header .main ul li {
+      float: left; }
+      header .main ul li a {
+        display: block;
+        text-align: center;
+        padding: 1em 1em;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em; }
+  header .lang ul {
+    list-style-type: none; }
+    header .lang ul li {
+      float: right; }
+      header .lang ul li a {
+        display: block;
+        text-align: center;
+        padding: 1em 1em;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em; }
+
+#hero {
+  background-image: url("../img/architecture-bay-boat-326410.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  align-content: center;
+  justify-content: center; }
+  #hero img {
+    display: block;
+    margin: 0 auto; }
+  #hero .header {
+    background-color: #AF979A;
+    width: 80%;
+    position: relative;
+    top: 5%;
+    margin-left: 10%; }
+    #hero .header h2 {
+      color: white;
+      font-size: 2rem; }
+
+.title {
+  color: #167BB2;
+  font-size: 2em;
+  text-transform: uppercase; }
+
+#about hr {
+  color: #167BB2;
+  width: 10vw;
+  height: 4px; }
+
+#about .experience {
+  color: #167BB2;
+  font-size: 1.5em; }
+
+#about .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 0.5fr;
+  grid-template-areas: "photo" "text" "icon";
+  border: 3px solid #167BB2;
+  height: auto;
+  width: 80%;
+  margin: 0 atuo; }
+  #about .card .photo {
+    grid-area: photo;
+    height: 50vh; }
+    #about .card .photo img {
+      height: 100%;
+      width: 100%; }
+  #about .card .text {
+    grid-area: text; }
+  #about .card .icon {
+    grid-area: icon; }
