@@ -2,14 +2,37 @@
 // colors
 $peach: #AF979A; 
 $blue: #167BB2;
+$light-grey: rgb(226, 226, 226);
 
 // sizes
 $large: 2em;
 $medium: 1.5em;
+$small: 1em;
+
+// FONTS
+$title: 'Playfair Display SC', serif;
+$text: 'Roboto', sans-serif;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $text;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 @import "header.scss";
 @import "hero.scss";
 @import "about.scss";
-
+@import "gallery.scss";
+@import "services.scss";
+@import "contact.scss";
+@import "footer.scss";
 
 

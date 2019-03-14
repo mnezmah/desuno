@@ -1,11 +1,10 @@
 .title {
+  font-family: $title;
   color: $blue;
   font-size: $large;
-  text-transform: uppercase;
 }
 
 #about {
-
 
   hr {
     color: $blue;
@@ -21,7 +20,7 @@
  .card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 0.5fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: 
     "photo"
     "text"
@@ -29,15 +28,22 @@
     border: 3px solid  $blue;
     height: auto;
     width: 80%;
-    margin: 0 atuo;
-
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto; 
+    grid-gap: $medium;
+    margin-bottom: $medium;
     .photo {
       grid-area: photo;
-        height: 50vh;
+      max-height: 300px;
       
       img {
-        height: 100%;
-        width: 100%;
+        display: block;
+        max-width: 100%;
+        max-height: 300px;
+        // height: auto;
+        width: auto;
       } 
     }
       
@@ -49,5 +55,14 @@
       grid-area: icon;
     }
   }
+}
 
+i {
+  font-size: 2rem;
+  color: white;
+  width: relative;
+  height: relative;
+  text-align: center;
+  padding: 1rem;
+  background-color:$peach;
 }

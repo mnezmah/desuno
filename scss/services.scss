@@ -1,0 +1,22 @@
+#services_section {
+  text-align: center;
+
+  .fa {
+    border: 2px solid $blue;
+    border-radius: 50%;
+    color: $blue;
+    margin: 0 auto;
+    background-color: white;
+  }
+
+  .title {
+    font-family: $title;
+    font-size: $large;
+    color: $blue;
+    text-transform: none;
+  }
+
+  .thin {
+    font-weight: 300;
+  }
+}

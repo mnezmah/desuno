@@ -1,0 +1,22 @@
+footer {
+  background-color: $blue;
+  height: 8.5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+  "copy copy logo";
+  align-items: center;
+
+  h2  {
+    color: white;
+    text-align: center;
+    grid-area: copy;
+    font-size: $small;
+    font-weight: 500;
+  }
+  img {
+    height: 100%;
+    grid-area: logo;
+  }
+}

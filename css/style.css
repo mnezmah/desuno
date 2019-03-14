@@ -1,29 +1,101 @@
-header {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: #AF979A;
-  height: 8vh; }
-  header .main ul {
-    list-style-type: none;
-    background-color: #AF979A; }
-    header .main ul li {
-      float: left; }
-      header .main ul li a {
-        display: block;
-        text-align: center;
-        padding: 1em 1em;
+  min-height: 8vh; }
+  nav .main {
+    background-color: #AF979A;
+    display: flex;
+    justify-content: space-around;
+    width: 30%; }
+    nav .main li {
+      list-style: none; }
+      nav .main li a {
         text-decoration: none;
+        letter-spacing: 3px;
         color: white;
-        font-size: 1.5em; }
-  header .lang ul {
+        font-size: 0,8rem; }
+  nav .lang {
     list-style-type: none; }
-    header .lang ul li {
+    nav .lang li {
       float: right; }
-      header .lang ul li a {
+      nav .lang li a {
         display: block;
         text-align: center;
         padding: 1em 1em;
         text-decoration: none;
         color: white;
-        font-size: 1.5em; }
+        font-size: 0.8rem;
+        cursor: pointer; }
+
+.burger {
+  display: none; }
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #e2e2e2;
+    margin: 5px;
+    transition: all 0.3s ease; }
+
+.nav-active {
+  transform: translateX(0%) !important; }
+
+.nav-active {
+  transform: translateX(0%) !important; }
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px); }
+
+.toggle .line2 {
+  opacity: 0; }
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px); }
+
+@media screen and (max-width: 1024px) {
+  .main {
+    width: 60% !important; } }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; }
+    body .main {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #AF979A;
+      width: 100% !important;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      z-index: 1; }
+      body .main li {
+        opacity: 0; }
+    body .burger {
+      display: block;
+      cursor: pointer; } }
 
 #hero {
   background-image: url("../img/architecture-bay-boat-326410.jpg");
@@ -46,9 +118,9 @@ header {
       font-size: 2rem; }
 
 .title {
+  font-family: "Playfair Display SC", serif;
   color: #167BB2;
-  font-size: 2em;
-  text-transform: uppercase; }
+  font-size: 2em; }
 
 #about hr {
   color: #167BB2;
@@ -62,19 +134,120 @@ header {
 #about .card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 0.5fr;
+  grid-template-rows: 2fr 1fr 1fr;
   grid-template-areas: "photo" "text" "icon";
   border: 3px solid #167BB2;
   height: auto;
   width: 80%;
-  margin: 0 atuo; }
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  grid-gap: 1.5em;
+  margin-bottom: 1.5em; }
   #about .card .photo {
     grid-area: photo;
-    height: 50vh; }
+    max-height: 300px; }
     #about .card .photo img {
-      height: 100%;
-      width: 100%; }
+      display: block;
+      max-width: 100%;
+      max-height: 300px;
+      width: auto; }
   #about .card .text {
     grid-area: text; }
   #about .card .icon {
     grid-area: icon; }
+
+i {
+  font-size: 2rem;
+  color: white;
+  width: relative;
+  height: relative;
+  text-align: center;
+  padding: 1rem;
+  background-color: #AF979A; }
+
+#gallery {
+  margin-top: 10%;
+  margin-bottom: -10%; }
+  #gallery #wrapper {
+    width: 100%;
+    height: 40vh; }
+    #gallery #wrapper div {
+      width: 100%; }
+    #gallery #wrapper img {
+      height: 100%;
+      width: 100%; }
+
+#services_section {
+  text-align: center; }
+  #services_section .fa {
+    border: 2px solid #167BB2;
+    border-radius: 50%;
+    color: #167BB2;
+    margin: 0 auto;
+    background-color: white; }
+  #services_section .title {
+    font-family: "Playfair Display SC", serif;
+    font-size: 2em;
+    color: #167BB2;
+    text-transform: none; }
+  #services_section .thin {
+    font-weight: 300; }
+
+#contact {
+  background-image: url(/img/benjamin-child-17946-unsplash.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white; }
+  #contact .contact_area {
+    background-color: rgba(34, 34, 40, 0.74); }
+    #contact .contact_area .title {
+      text-align: center;
+      color: white; }
+    #contact .contact_area h3 {
+      display: block;
+      font-family: 'Roboto', Sans-serif;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      max-width: 80%;
+      margin: 0 auto; }
+    #contact .contact_area .contact_item .fa {
+      border-radius: 50%;
+      font-size: 1.5em;
+      width: auto; }
+    #contact .contact_area .contact_item p {
+      font-family: in;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 0.8; }
+    #contact .contact_area .map_frame {
+      width: 100%;
+      overflow: hidden;
+      height: 350px;
+      margin-top: 2em;
+      margin-bottom: -20%; }
+    #contact .contact_area .location {
+      max-width: 80%;
+      margin: 0 auto;
+      margin-top: -15%;
+      padding-bottom: 2em; }
+
+footer {
+  background-color: #167BB2;
+  height: 8.5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "copy copy logo";
+  align-items: center; }
+  footer h2 {
+    color: white;
+    text-align: center;
+    grid-area: copy;
+    font-size: 1em;
+    font-weight: 500; }
+  footer img {
+    height: 100%;
+    grid-area: logo; }

@@ -1,0 +1,49 @@
+#contact {
+  background-image: url(/img/benjamin-child-17946-unsplash.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+.contact_area {
+  background-color: rgba(34, 34, 40, 0.74);
+  .title {
+    text-align: center;
+    color: white;
+  }
+  h3 {
+    display: block;
+    font-family: 'Roboto', Sans-serif;
+    line-height: 2rem;
+    font-size: 1.5rem; 
+    font-weight: 500;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+.contact_item {
+  .fa {
+    border-radius: 50%;
+    font-size: $medium;
+    width: auto;
+  }
+  p {
+    font-family: in;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 0.8;
+  }
+  
+}
+.map_frame {
+  width: 100%; 
+  overflow: hidden; 
+  height: 350px;
+  margin-top: $large;
+  margin-bottom: -20%;
+}
+.location {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: -15%;
+    padding-bottom: $large;
+  }
+}
+}
