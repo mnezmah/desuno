@@ -6,31 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Desunot</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="main"> 
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+  <!-- <header></header> -->
+    <nav> 
+      <ul class="main">
+        <li class="main-item li-home"><a href="#">Home</a></li>
+        <li class="main-item li-about"><a href="#">About</a></li>
+        <li class="main-item li-gallery"><a href="#">Gallery</a></li>
+        <li class="main-item li-services"><a href="#">Services</a></li>
+        <li class="main-item li-contact"><a href="#">Contact</a></li>
       </ul>
+      <!-- <ul class="lang">
+        <li class="lang-item"><a href="#">ENG</a></li>
+        <li class="lang-item"><a href="#">DE</a></li>
+        <li class="lang-item"><a href="#">HR</a></li>
+        <li class="lang-item"><a href="#">IT</a></li>
+        <li class="lang-item"><a href="#">EPS</a></li>
+        <li class="lang-item"><a href="#">RO</a></li>
+        <li class="lang-item"><a href="#">MK</a></li>
+      </ul> -->
+      <div class="burger">
+      <div class ="line1"></div>
+      <div class ="line2"></div>
+      <div class ="line3"></div>
+    </div><!-- /burger-->
     </nav>
-
-    <nav class="lang"> 
-        <ul>
-          <li><a href="#">ENG</a></li>
-          <li><a href="#">DE</a></li>
-          <li><a href="#">HR</a></li>
-          <li><a href="#">IT</a></li>
-          <li><a href="#">EPS</a></li>
-          <li><a href="#">RO</a></li>
-          <li><a href="#">MK</a></li>
-        </ul>
-      </nav>
-  </header>
+    
+  <!-- </header> -->
 
   <div id="hero">
     <img src="img/LOGO.svg" alt="desuno logo">
@@ -88,27 +95,33 @@
 </section><!-- /about -->
 
 <div id="gallery">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
-  <img src="" alt="">
+  <div class="responsive" id="wrapper">
+    <div><img src="img/carousel/01.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/02.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/03.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/04.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/05.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/06.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/07.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/08.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/09.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/010.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/011.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/012.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/013.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/014.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/015.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/016.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/017.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/018.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/019.jpg" alt="slider image"/></div>
+    <div><img src="img/carousel/020.jpg" alt="slider image"/></div>
+  </div><!--/slider -->
 </div><!--/gallery -->
 <section id="services_section">
   <div class="services">
     <i class="fa fa-handshake"></i>
-    <h1>Services</h1>
+    <h1 class="title">Services</h1>
     <p><strong>Independent sales and business development consulting
     </strong></p>
     <p class="thin">Market and new customers research in Western and Northern Europe</p>
@@ -117,13 +130,14 @@
   </div>
   <div class="what_we_do">
     <i class="fa fa-question"></i>
-    <h1>What We Do</h1>
+    <h1 class="title">What We Do</h1>
     <p><strong>We help manufacturers engage with customers and vice versa</strong></p>
     <p class="thin">We connect producers from South – East Europe and Balkan area with customers from Northern and Western Europe.</p>
     <p><strong>We provide follow-up and engagement in all phases from initial contact to delivery (customer identification, request for quotation – offer – order – delivery)</strong></p>
     <p class="thin">We have very much individual approach both for customers and suppliers, looking to fullfil their specific needs.</p>
   </div><!-- /What we do -->
 </section><!-- services_section-->
+
 <section id="contact">
   <div class="contact_area">
     <h1 class="title">Contact US</h1>
@@ -131,29 +145,48 @@
     <div class="icons">
     <div class="contact_item">
       <i class="fa fa-home"></i>
-      <h3>Desuno business</h3>
-      <h3>constulting</h3>
-      <h3>Drage Gervaisa 54</h3>
-      <h3>51000 Rijeka, Croatia</h3>
+      <p>Desuno business</p>
+      <p>constulting</p>
+      <p>Drage Gervaisa 54</p>
+      <p>51000 Rijeka, Croatia</p>
     </div><!-- /contact_item-->  
     <div class="contact_item">
         <i class="fa fa-phone"></i>
-        <h3>00385 51 437 231</h3>
+        <p>00385 51 437 231</p>
       </div><!-- /contact_item-->  
       <div class="contact_item">
           <i class="fa fa-mobile"></i>
-          <h3>00385 95 903 7940</h3>
+          <p>00385 95 903 7940</p>
         </div><!-- /contact_item-->  
         <div class="contact_item">
             <i class="fa fa-envelope"></i>
             <h3>desuno@desuno.org</h3>
           </div><!-- /contact_item-->  
-    </div><!-- icons-->
-    <div>
-      <iframe src="" frameborder="0">google map</iframe>
-    </div>
+    </div><!-- /icons-->
+    <div class="map_frame"> 
+    <div style="width: 100%">
+      <iframe 
+          style="border: 0; margin-top: -130px;"  
+          width="100%" 
+          height="350" src="https://maps.google.com/maps?width=100%&amp;height=650&amp;hl=en&amp;viecoord=45.3200883,14.4674338&amp;q=+(Rijeka%20Croatia)&amp;ie=UTF8&amp;t=&amp;z=5&amp;iwloc=B&amp;output=embed&amp;view" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0">
+      </iframe>
+   </div><br />
+  </div><!--/map_frame -->
+   
     <h2 class="location">All the major industrial centers in Germany, Northern Italy, Austria and Switzerland are inside 600km distance and easily reachable, thanks to our position in the center of Europe</h2>
   </div><!-- /contact_area-->
 </section>
+<footer>
+  <h2>desuno © 2019</h2>
+  <img src="img/LOGO_white.svg" alt="desuno logo">
+</footer>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
