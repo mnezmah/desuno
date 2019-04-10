@@ -26,37 +26,69 @@ nav {
       transition: transform 0.5s ease-in;
       z-index: 1;
 
+            a {
+              color: white;
+              padding: 12px 16px;
+              text-decoration: none; 
+              display: block;
+              a:hover {
+                font-size: 2rem;
+              }
+            }
+          }
+      img {
+        height: 1.5rem;
+      }
+        }
       li {
         list-style: none;
         opacity: 0;
-    
         a {
           text-decoration: none;
           letter-spacing: 3px;
           color: white;
-          font-size: 0,8rem;
-        }
-      }
-    }
-    .lang {
-      list-style-type: none; 
-    
-      li {
-        float: right; 
-        
-        a {
+          font-size: 0,8rem; 
           display: block;
-          text-align: center;
           padding: 1em 1em;
-          text-decoration: none;
-          color: white;
-          font-size: 0.8rem;
           cursor: pointer;
+    
+          }
+          :hover {
+            background: darken($peach, 10%);
         }
-      
+      }        
+
+    .dropdown {
+      display: inline-block;
+      min-width: 8.5%;
+ 
+        img {
+          vertical-align: middle;
+          margin-right: 4%;
+        }
+    }     
+    
+
+    .dropdown-content  {
+        display: none;
+        position: absolute;
+        background-color: $peach;
+        min-width: 140px;
+        z-index: 5;
+        }
+      .dropdown:hover .dropdown-content{
+        display: block;
+        background: $peach;
+        a:hover {
+         background: darken($peach, 10%);
+        }
+        img {
+          width: 24px;
+          margin-right: 4%;
+        }
       }
-    }
-  }
+
+
   .burger {
     display: block;
     cursor: pointer;

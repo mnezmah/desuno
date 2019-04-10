@@ -1,4 +1,8 @@
-// Header
+@media screen and (max-width: 38em){
+  .dropdown-content {
+    margin-bottom: 50%;
+  }
+}
 
 @media screen and (min-width: 39em) {
   body {
@@ -145,6 +149,15 @@
 }
 
 @media (min-width: 53em) {
+  //havigation
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  .lang {
+    z-index: 1;
+  }
+}
   //hero 
   #hero{
     height: 90vh;
