@@ -2,7 +2,7 @@
   background-image: url("../img/architecture-bay-boat-326410.jpg"); 
   background-position: center;
   background-size: cover;
-  height: 50vh;
+  height: 55vh;
   align-content: center;
   justify-content: center;
 
@@ -12,7 +12,7 @@
   }
 
   .header {
-      background-color: $peach;
+      background-color: rgba(148,113,113,0.82);
       width: 80%; 
       position: relative;
       top: 5%;
@@ -20,7 +20,12 @@
       
       h2 {
         color: white;
-        font-size: $small;
+        font-size: $header;
+        font-weight: 400;
+        line-height: 1.7;
+        padding: 4%;
+        text-align: center;
       }
   }
 }
+

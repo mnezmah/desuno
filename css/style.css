@@ -18,9 +18,22 @@ nav {
     background-color: #AF979A;
     display: flex;
     justify-content: space-around;
-    width: 30%; }
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AF979A;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1; }
     nav .main li {
-      list-style: none; }
+      list-style: none;
+      opacity: 0; }
       nav .main li a {
         text-decoration: none;
         letter-spacing: 3px;
@@ -40,16 +53,14 @@ nav {
         cursor: pointer; }
 
 .burger {
-  display: none; }
+  display: block;
+  cursor: pointer; }
   .burger div {
     width: 25px;
     height: 3px;
     background-color: #e2e2e2;
     margin: 5px;
     transition: all 0.3s ease; }
-
-.nav-active {
-  transform: translateX(0%) !important; }
 
 .nav-active {
   transform: translateX(0%) !important; }
@@ -71,101 +82,111 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px); }
 
-@media screen and (max-width: 1024px) {
-  .main {
-    width: 60% !important; } }
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden; }
-    body .main {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #AF979A;
-      width: 100% !important;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-      z-index: 1; }
-      body .main li {
-        opacity: 0; }
-    body .burger {
-      display: block;
-      cursor: pointer; } }
-
 #hero {
   background-image: url("../img/architecture-bay-boat-326410.jpg");
   background-position: center;
   background-size: cover;
-  height: 50vh;
+  height: 55vh;
   align-content: center;
   justify-content: center; }
   #hero img {
     display: block;
     margin: 0 auto; }
   #hero .header {
-    background-color: #AF979A;
+    background-color: rgba(148, 113, 113, 0.82);
     width: 80%;
     position: relative;
     top: 5%;
     margin-left: 10%; }
     #hero .header h2 {
       color: white;
-      font-size: 2rem; }
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 4%;
+      text-align: center; }
 
 .title {
   font-family: "Playfair Display SC", serif;
   color: #167BB2;
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center;
+  margin: 1em 1em 5% 1em; }
 
 #about hr {
-  color: #167BB2;
+  display: block;
+  border: 0;
+  border-top: 3px solid #167BB2;
   width: 10vw;
-  height: 4px; }
+  height: 4px;
+  margin: 5% auto; }
 
 #about .experience {
   color: #167BB2;
-  font-size: 1.5em; }
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 5% auto;
+  line-height: 1.4;
+  width: 80%; }
 
 #about .card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "photo" "text" "icon";
   border: 3px solid #167BB2;
   height: auto;
-  width: 80%;
+  width: 70%;
   align-items: center;
   justify-content: center;
-  justify-items: center;
   margin: 0 auto;
   grid-gap: 1.5em;
   margin-bottom: 1.5em; }
   #about .card .photo {
+    background-size: cover;
     grid-area: photo;
-    max-height: 300px; }
-    #about .card .photo img {
-      display: block;
-      max-width: 100%;
-      max-height: 300px;
-      width: auto; }
+    height: 200px; }
+  #about .card .photo-metal {
+    background-image: url("../img/close-up-cogs-gears-149387.jpg"); }
+  #about .card .photo-wood {
+    background-image: url("../img/slika 1.jpg"); }
+  #about .card .photo-chemical {
+    background-image: url("../img/IMG_8065uredena.jpg"); }
   #about .card .text {
-    grid-area: text; }
+    grid-area: text;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto; }
+    #about .card .text h3 {
+      font-size: 1.3rem;
+      padding: 10%;
+      margin: 5% auto;
+      width: 90%; }
+    #about .card .text p {
+      line-height: 1.7;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px; }
   #about .card .icon {
-    grid-area: icon; }
+    grid-area: icon;
+    padding: 10%;
+    margin: 0 auto; }
 
-i {
+#about .other {
+  color: #167BB2;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 600; }
+
+#about i {
   font-size: 2rem;
   color: white;
   width: relative;
   height: relative;
   text-align: center;
   padding: 1rem;
-  background-color: #AF979A; }
+  background-color: #998675; }
 
 #gallery {
   margin-top: 10%;
@@ -173,6 +194,10 @@ i {
   #gallery #wrapper {
     width: 100%;
     height: 40vh; }
+    #gallery #wrapper .slick-list {
+      -webkit-box-shadow: 6px 6px 31px -4px #a6aeb3;
+      -moz-box-shadow: 6px 6px 31px -4px #a6aeb3;
+      box-shadow: 6px 6px 31px -4px #a6aeb3; }
     #gallery #wrapper div {
       width: 100%; }
     #gallery #wrapper img {
@@ -182,16 +207,29 @@ i {
 #services_section {
   text-align: center; }
   #services_section .fa {
+    display: inline-block;
     border: 2px solid #167BB2;
+    font-size: 2em;
     border-radius: 50%;
     color: #167BB2;
-    margin: 0 auto;
-    background-color: white; }
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20%;
+    margin-bottom: 0; }
   #services_section .title {
     font-family: "Playfair Display SC", serif;
-    font-size: 2em;
+    font-size: 2.5rem;
     color: #167BB2;
-    text-transform: none; }
+    text-transform: none;
+    font-weight: 600;
+    margin-bottom: 10%;
+    margin-top: 5%; }
+  #services_section p {
+    line-height: 1.5;
+    width: 80%;
+    font-size: 1.3rem;
+    margin: 1rem auto; }
   #services_section .thin {
     font-weight: 300; }
 
@@ -201,53 +239,190 @@ i {
   text-align: center;
   color: white; }
   #contact .contact_area {
-    background-color: rgba(34, 34, 40, 0.74); }
+    background-color: rgba(34, 34, 40, 0.74);
+    padding-top: 5%; }
     #contact .contact_area .title {
       text-align: center;
       color: white; }
     #contact .contact_area h3 {
       display: block;
       font-family: 'Roboto', Sans-serif;
-      line-height: 2rem;
-      font-size: 1.5rem;
+      line-height: 1.4;
+      font-size: 1.1rem;
       font-weight: 500;
-      max-width: 80%;
-      margin: 0 auto; }
-    #contact .contact_area .contact_item .fa {
-      border-radius: 50%;
-      font-size: 1.5em;
-      width: auto; }
-    #contact .contact_area .contact_item p {
-      font-family: in;
-      font-weight: 600;
-      font-size: 1.3rem;
-      line-height: 0.8; }
+      max-width: 85%;
+      margin: 5% auto; }
+    #contact .contact_area .icons {
+      display: grid;
+      grid-template-areas: "home"  "phone"  "mobile"  "mail"; }
+      #contact .contact_area .icons .contact_item .fa {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 50px;
+        background-color: #998675;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 10%; }
+      #contact .contact_area .icons .contact_item .item_home {
+        grid-area: home; }
+      #contact .contact_area .icons .contact_item .item_phone {
+        grid-area: phone; }
+      #contact .contact_area .icons .contact_item .item_mobile {
+        grid-area: mobile; }
+      #contact .contact_area .icons .contact_item .item_mail {
+        grid-area: mail; }
+      #contact .contact_area .icons .contact_item p {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.1; }
     #contact .contact_area .map_frame {
       width: 100%;
       overflow: hidden;
-      height: 350px;
-      margin-top: 2em;
-      margin-bottom: -20%; }
+      margin-top: 2em; }
+      #contact .contact_area .map_frame iframe {
+        height: 500px; }
     #contact .contact_area .location {
       max-width: 80%;
       margin: 0 auto;
-      margin-top: -15%;
-      padding-bottom: 2em; }
+      padding-bottom: 2em;
+      padding-top: 2em;
+      font-weight: 500;
+      font-size: 1.1em; }
 
 footer {
   background-color: #167BB2;
-  height: 8.5vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr;
-  grid-template-areas: "copy copy logo";
-  align-items: center; }
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
   footer h2 {
     color: white;
+    vertical-align: middle;
     text-align: center;
-    grid-area: copy;
+    flex-grow: 1;
+    padding-top: 6%;
     font-size: 1em;
-    font-weight: 500; }
+    font-weight: 500;
+    max-width: 70%; }
   footer img {
-    height: 100%;
-    grid-area: logo; }
+    max-height: 100%; }
+
+@media screen and (min-width: 39em) {
+  body {
+    overflow-x: hidden; }
+    body .main {
+      justify-content: flex-start;
+      flex-direction: row;
+      transform: translatex(0);
+      height: 8vh;
+      position: fixed;
+      top: 0; }
+      body .main li {
+        opacity: 1.0;
+        margin-left: 5%;
+        font-weight: 500; }
+  .burger {
+    display: none;
+    margin: 0 auto; }
+  #hero {
+    height: 70vh; }
+    #hero img {
+      width: 50%; }
+    #hero .header h2 {
+      font-size: 2em;
+      line-height: 1.3; }
+  #about {
+    margin-bottom: 10%; }
+    #about .title {
+      font-size: 3.2rem; }
+    #about .card {
+      grid-template-columns: 1fr 40% .5fr;
+      grid-template-rows: 100%;
+      grid-template-areas: "photo text icon";
+      width: 85%;
+      margin-bottom: 10%; }
+      #about .card .photo {
+        height: 100%; }
+      #about .card .text {
+        margin-bottom: 10%;
+        text-align: left; }
+        #about .card .text h3 {
+          display: inline-block;
+          margin-top: 10%;
+          margin-bottom: 10%;
+          text-align: left;
+          width: 100%;
+          padding-left: 0; }
+      #about .card .fa, #about .card .fas {
+        margin-right: 50%; }
+    #about .card-chemical {
+      margin-bottom: 0; }
+  .other {
+    padding-top: 3%; }
+  #gallery {
+    margin-bottom: 15%; }
+  #services_section {
+    margin-bottom: 10%; }
+    #services_section .services, #services_section .what_we_do {
+      width: 60%;
+      margin: 10% auto 0 auto; }
+      #services_section .services p, #services_section .what_we_do p {
+        font-size: 1em;
+        text-align: justify;
+        orphans: 2; }
+    #services_section .fa {
+      line-height: 60px;
+      width: 60px;
+      height: 60px;
+      margin-top: 0;
+      font-size: 2em;
+      margin-bottom: 0; }
+    #services_section .title {
+      margin-top: 3%; }
+  .icons {
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "home phone mobile mail" !important;
+    grid-gap: 3%;
+    margin: 0 auto 10% auto;
+    max-width: 90%; }
+    .icons .contact_item .fa {
+      font-size: 1.5rem;
+      line-height: 60px;
+      width: 60px;
+      height: 60px; }
+    .icons .location {
+      font-weight: 500;
+      margin-top: 10%; }
+  footer h2 {
+    font-size: 2rem;
+    padding-top: 0;
+    padding-left: 25%; } }
+
+@media (min-width: 53em) {
+  #hero {
+    height: 90vh; }
+  #about .card {
+    width: 75%;
+    margin-bottom: 5%; }
+  #about .other {
+    padding: 0; }
+  #gallery {
+    margin-top: -3%;
+    margin-bottom: 0; }
+    #gallery .slick-dots {
+      margin-bottom: -13%; }
+  #services_section {
+    display: flex;
+    margin-top: -5%;
+    max-width: 80%;
+    margin: 10% auto; }
+  #contact .icons {
+    margin-bottom: 5%; }
+  footer h2 {
+    font-size: 1rem;
+    padding-left: 30%; } }

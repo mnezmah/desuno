@@ -5,6 +5,7 @@
   color: white;
 .contact_area {
   background-color: rgba(34, 34, 40, 0.74);
+  padding-top: 5%;
   .title {
     text-align: center;
     color: white;
@@ -12,38 +13,74 @@
   h3 {
     display: block;
     font-family: 'Roboto', Sans-serif;
-    line-height: 2rem;
-    font-size: 1.5rem; 
+    line-height: 1.4;
+    font-size: 1.1rem; 
     font-weight: 500;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 85%;
+    margin: 5% auto;
   }
-.contact_item {
+.icons{
+  display: grid;
+  grid-template-areas: 
+  "home" 
+  "phone" 
+  "mobile" 
+  "mail";
+
+  .contact_item {
   .fa {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 50px;
+    background-color: $icon;
+    color: white;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: $medium;
-    width: auto;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 10%;
+  }
+  .item_home {
+    grid-area: home;
+  }
+  .item_phone {
+    grid-area: phone;
+  }
+  .item_mobile {
+    grid-area: mobile;
+  }
+  .item_mail {
+    grid-area: mail;
   }
   p {
-    font-family: in;
-    font-weight: 600;
-    font-size: 1.3rem;
-    line-height: 0.8;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.1;
   }
   
+  }
 }
 .map_frame {
   width: 100%; 
   overflow: hidden; 
-  height: 350px;
+  // height: 500px;
   margin-top: $large;
-  margin-bottom: -20%;
+  // margin-bottom: -20%;
+
+  iframe {
+    height: 500px;
+  }
 }
 .location {
     max-width: 80%;
     margin: 0 auto;
-    margin-top: -15%;
     padding-bottom: $large;
+    padding-top: $large;
+    font-weight: 500;
+    font-size: 1.1em;
   }
 }
 }
+
+

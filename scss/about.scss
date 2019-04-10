@@ -2,61 +2,98 @@
   font-family: $title;
   color: $blue;
   font-size: $large;
+  text-align: center;
+  margin: $small $small 5% $small; 
 }
 
 #about {
 
   hr {
-    color: $blue;
+    display: block;
+    border: 0;
+    border-top: 3px solid $blue;
     width: 10vw;
     height: 4px;
+    margin: 5% auto;
   }
 
   .experience {
     color: $blue;
-    font-size: $medium;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 5% auto;
+    line-height: 1.4;
+    width: 80%;
   }
 
  .card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "photo"
     "text"
     "icon";
-    border: 3px solid  $blue;
+  	border: 3px solid  $blue;
     height: auto;
-    width: 80%;
+    width: 70%;
     align-items: center;
     justify-content: center;
-    justify-items: center;
     margin: 0 auto; 
     grid-gap: $medium;
     margin-bottom: $medium;
+
     .photo {
+      background-size: cover;
       grid-area: photo;
-      max-height: 300px;
-      
-      img {
-        display: block;
-        max-width: 100%;
-        max-height: 300px;
-        // height: auto;
-        width: auto;
-      } 
+      height: 200px;
+    }
+
+    .photo-metal {
+      background-image: url("../img/close-up-cogs-gears-149387.jpg");      
+    }
+    .photo-wood {
+      background-image: url("../img/slika\ 1.jpg");      
     }
       
+    .photo-chemical {
+      background-image: url("../img/IMG_8065uredena.jpg");      
+    }
     .text {
       grid-area: text;
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+
+      h3 {
+        font-size: $header;
+        padding: 10%;
+        margin: 5% auto;
+        width: 90%;
+      }
+
+      p {
+        line-height: 1.7; 
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+      }
     }
 
     .icon {
       grid-area: icon;
+      padding: 10%;
+      margin: 0 auto;
     }
   }
-}
 
+.other {
+    color: $blue;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 600;
+  }
 i {
   font-size: 2rem;
   color: white;
@@ -64,5 +101,6 @@ i {
   height: relative;
   text-align: center;
   padding: 1rem;
-  background-color:$peach;
+  background-color: $icon;
+}     
 }

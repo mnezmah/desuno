@@ -3,11 +3,13 @@
 $peach: #AF979A; 
 $blue: #167BB2;
 $light-grey: rgb(226, 226, 226);
+$icon: #998675;
 
 // sizes
 $large: 2em;
 $medium: 1.5em;
 $small: 1em;
+$header: 1.3rem;
 
 // FONTS
 $title: 'Playfair Display SC', serif;
@@ -34,5 +36,6 @@ html {
 @import "services.scss";
 @import "contact.scss";
 @import "footer.scss";
+@import "media-queries.scss";
 
 

@@ -1,9 +1,6 @@
 
 
-// header {
-//   background-color: $peach;
-
-  nav {
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,15 +12,25 @@
       display: flex;
       justify-content: space-around;
       width: 30%;
+      // --------------- 
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $peach;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      z-index: 1;
 
       li {
-        // float: left;
         list-style: none;
+        opacity: 0;
     
         a {
-          // display: block;
-          // text-align: center;
-          // padding: 1em 1em;
           text-decoration: none;
           letter-spacing: 3px;
           color: white;
@@ -51,8 +58,9 @@
     }
   }
   .burger {
-    display: none; 
-  
+    display: block;
+    cursor: pointer;
+   
     div {
       width: 25px;
       height: 3px;
@@ -67,9 +75,6 @@
   transform: translateX(0%) !important;
 }
 
-.nav-active {
-  transform: translateX(0%) !important;
-}
 
 @keyframes navLinkFade {
   from{
@@ -92,41 +97,4 @@
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px); 
 }
-
-
-@media screen and (max-width: 1024px) {
-  .main {
-    width: 60% !important;
-}
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  
-    .main {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: $peach;
-      width: 100% !important;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in;
-      z-index: 1;
-
-      li {
-        opacity: 0;
-      }
-    }
-    .burger{
-        display: block;
-        cursor: pointer;
-    }
-  }
-}
-
 
