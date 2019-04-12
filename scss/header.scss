@@ -1,11 +1,14 @@
 
 
 nav {
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: $peach;
     min-height: 8vh;
+    width: 100%;
+    z-index: 3;
     
     .main {
       background-color: $peach;

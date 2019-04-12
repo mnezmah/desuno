@@ -12,14 +12,19 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto:300,400,500,600" rel="stylesheet">
 </head>
 <body>
-  <!-- <header> -->
+  <div class="container">
     <nav> 
       <ul class="main">
-        <li class="main-item li-home"><a href="#">Home</a></li>
-        <li class="main-item li-about"><a href="#">About</a></li>
-        <li class="main-item li-gallery"><a href="#">Gallery</a></li>
-        <li class="main-item li-services"><a href="#">Services</a></li>
-        <li class="main-item li-contact"><a href="#">Contact</a></li>
+        <li class="main-item li-home">
+        <a  href="#hero">Home</a></li>
+        <li class="main-item li-about">
+        <a  href="#about">About</a></li>
+        <li class="main-item li-gallery">
+        <a  href="#gallery">Gallery</a></li>
+        <li class="main-item li-services">
+        <a href="#services_section">Services</a></li>
+        <li class="main-item li-contact">
+        <a  href="#contact">Contact</a></li>
         <li class="dropdown">
           <a href="javascript:void(0)"
           class="dropbtn"><img src="img/iconfinder_United-Kingdom_flat_92402.png" alt="english flag">English</a>
@@ -31,25 +36,26 @@
             <a href="#"><img src="img/iconfinder_Spain_flat_92356.png" alt="">EPS</a>
             <a href="#"><img src="img/iconfinder_Romania_flat_92300.png" alt="">RO</a>
             <a href="#"><img src="img/iconfinder_Macedonia_flat_92186.png" alt="">MK</a>
-          </li>
-        </div>
+          </div> 
+        </li>
         
       </ul>
       <div class="burger">
       <div class ="line1"></div>
       <div class ="line2"></div>
       <div class ="line3"></div>
-    </div><!-- /burger-->
+      </div><!-- /burger-->
     </nav>
     
   <!-- </header> -->
 
-  <div id="hero">
+  <section id="hero">
     <img src="img/LOGO.svg" alt="desuno logo">
     <div class="header">
     <h2>B2B service which connects EU customers with suppliers from SEE (South-east Europe)</h2>
   </div>
-  </div>
+</section>
+
 <section id="about">
   <h1 class="title" >About Us</h1>
   <hr>
@@ -106,7 +112,8 @@
   </div>
 </section><!-- /about -->
 
-<div id="gallery">
+
+<section id="gallery">
   <div class="responsive" id="wrapper">
     <div><img src="img/carousel/01.jpg" alt="slider image"/></div>
     <div><img src="img/carousel/02.jpg" alt="slider image"/></div>
@@ -129,7 +136,8 @@
     <div><img src="img/carousel/019.jpg" alt="slider image"/></div>
     <div><img src="img/carousel/020.jpg" alt="slider image"/></div>
   </div><!--/slider -->
-</div><!--/gallery -->
+</section><!--/gallery -->
+
 <section id="services_section">
   <div class="services">
     <i class="fa fa-handshake"></i>
@@ -189,12 +197,14 @@
   </div><!--/map_frame -->
    
     <h4 class="location">All the major industrial centers in Germany, Northern Italy, Austria and Switzerland are inside 600km distance and easily reachable, thanks to our position in the center of Europe</h4>
-  </div><!-- /contact_area-->
+  </div>
 </section>
 <footer>
   <h2>desuno © 2019</h2>
   <img src="img/LOGO_white.svg" alt="desuno logo">
 </footer>
+</div><!-- /container-->
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>

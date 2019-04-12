@@ -6,14 +6,22 @@
 html {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  scroll-behavior: smooth; }
+
+body .container {
+  width: 100%;
+  height: 100%; }
 
 nav {
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #AF979A;
-  min-height: 8vh; }
+  min-height: 8vh;
+  width: 100%;
+  z-index: 3; }
   nav .main {
     background-color: #AF979A;
     display: flex;
@@ -114,7 +122,8 @@ li {
   background-size: cover;
   height: 55vh;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 8vh; }
   #hero img {
     display: block;
     margin: 0 auto; }
@@ -216,7 +225,8 @@ li {
 
 #gallery {
   margin-top: 10%;
-  margin-bottom: -10%; }
+  margin-bottom: -10%;
+  padding-top: 15%; }
   #gallery #wrapper {
     width: 100%;
     height: 40vh; }
@@ -321,7 +331,7 @@ li {
 
 footer {
   background-color: #167BB2;
-  height: 8vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -331,10 +341,10 @@ footer {
     vertical-align: middle;
     text-align: center;
     flex-grow: 1;
-    padding-top: 6%;
     font-size: 1em;
     font-weight: 500;
-    max-width: 70%; }
+    max-width: 70%;
+    padding-left: 20%; }
   footer img {
     max-height: 100%; }
 
@@ -366,36 +376,32 @@ footer {
     #hero .header h2 {
       font-size: 2em;
       line-height: 1.3; }
-  #about {
+  #about .title {
+    font-size: 3.2rem; }
+  #about .card {
+    grid-template-columns: 1fr 40% .5fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "photo text icon";
+    width: 85%;
     margin-bottom: 10%; }
-    #about .title {
-      font-size: 3.2rem; }
-    #about .card {
-      grid-template-columns: 1fr 40% .5fr;
-      grid-template-rows: 100%;
-      grid-template-areas: "photo text icon";
-      width: 85%;
-      margin-bottom: 10%; }
-      #about .card .photo {
-        height: 100%; }
-      #about .card .text {
+    #about .card .photo {
+      height: 100%; }
+    #about .card .text {
+      margin-bottom: 10%;
+      text-align: left; }
+      #about .card .text h3 {
+        display: inline-block;
+        margin-top: 10%;
         margin-bottom: 10%;
-        text-align: left; }
-        #about .card .text h3 {
-          display: inline-block;
-          margin-top: 10%;
-          margin-bottom: 10%;
-          text-align: left;
-          width: 100%;
-          padding-left: 0; }
-      #about .card .fa, #about .card .fas {
-        margin-right: 50%; }
-    #about .card-chemical {
-      margin-bottom: 0; }
+        text-align: left;
+        width: 100%;
+        padding-left: 0; }
+    #about .card .fa, #about .card .fas {
+      margin-right: 50%; }
+  #about .card-chemical {
+    margin-bottom: 0; }
   .other {
     padding-top: 3%; }
-  #gallery {
-    margin-bottom: 15%; }
   #services_section {
     margin-bottom: 10%; }
     #services_section .services, #services_section .what_we_do {
@@ -429,36 +435,61 @@ footer {
       font-weight: 500;
       margin-top: 10%; }
   footer h2 {
-    font-size: 2rem;
     padding-top: 0;
     padding-left: 25%; } }
+
+@media (min-width: 42em) {
+  #gallery {
+    padding-top: 12%; } }
 
 @media (min-width: 53em) {
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 3; }
     nav .lang {
       z-index: 1; }
   #hero {
-    height: 90vh; }
-  #about .card {
-    width: 75%;
-    margin-bottom: 5%; }
-  #about .other {
-    padding: 0; }
+    height: 100vh; }
+  #about {
+    padding-top: 5%; }
+    #about .card {
+      width: 75%;
+      margin-bottom: 5%; }
+    #about .other {
+      padding: 0; }
   #gallery {
     margin-top: -3%;
     margin-bottom: 0; }
+    #gallery .slick-track {
+      z-index: 2; }
     #gallery .slick-dots {
       margin-bottom: -13%; }
   #services_section {
     display: flex;
-    margin-top: -5%;
     max-width: 80%;
-    margin: 10% auto; }
+    margin: 0 auto 5% auto;
+    padding-top: 5%; }
+    #services_section .services, #services_section .what_we_do {
+      margin-top: 0; }
+      #services_section .services p, #services_section .what_we_do p {
+        font-size: 1.4rem;
+        color: #504f54; }
+  #contact .contact_area {
+    padding-bottom: 5%; }
   #contact .icons {
     margin-bottom: 5%; }
-  footer h2 {
-    font-size: 1rem;
-    padding-left: 30%; } }
+  footer {
+    max-height: 6vh; }
+    footer h2 {
+      font-size: 1rem;
+      padding-left: 30%; } }
+
+@media (min-width: 69em) {
+  #services_section {
+    padding-top: 12%; } }
+
+@media (min-width: 69em) {
+  #services_section {
+    padding-top: 16%; } }
