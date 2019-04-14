@@ -443,6 +443,8 @@ footer {
     padding-top: 12%; } }
 
 @media (min-width: 53em) {
+  .title {
+    font-size: 3rem; }
   nav {
     display: flex;
     flex-direction: row;
@@ -478,8 +480,12 @@ footer {
         color: #504f54; }
   #contact .contact_area {
     padding-bottom: 5%; }
+    #contact .contact_area h3 {
+      font-size: 2em; }
   #contact .icons {
     margin-bottom: 5%; }
+  #contact .location {
+    font-size: 1.8em !important; }
   footer {
     max-height: 6vh; }
     footer h2 {

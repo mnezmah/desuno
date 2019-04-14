@@ -154,6 +154,9 @@
 }
 
 @media (min-width: 53em) {
+  .title {
+    font-size: 3rem;
+  }
   //havigation
   nav {
     display: flex;
@@ -214,13 +217,18 @@
 
   // contact 
     #contact {
-      // padding-bottom: 5%;
 
       .contact_area {
         padding-bottom: 5%;
+        h3 {
+          font-size: 2em;
+        }
       }
       .icons {
         margin-bottom: 5%;
+      }
+      .location {
+      font-size: 1.8em !important;
       }
     }
    //footer 
